@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pages.Pages.FlyoutPageDemo"
+             Title="FlyoutPageDemo"
+            FlyoutLayoutBehavior="Popover">
+    <!--la propriété Popover de FlyoutLayoutBehavior permet d'obtenir le même rendu de ce type de page que ce soit sur Windows comme sur Android-->
+    <FlyoutPage.Flyout >
+        <ContentPage Title="flyout" BackgroundColor="Gray">
+            <Label Text="This is FlyoutPage.Flyout" 
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Red"/>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+  
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="detail" BackgroundColor="White">
+                    <Label Text="This is FlyoutPage.Flyout" 
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Yellow"/>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
